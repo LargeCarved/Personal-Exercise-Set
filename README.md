@@ -9,7 +9,7 @@
     <img alt="img" src="https://img.shields.io/badge/dynamic/xml?url=https://blog.csdn.net/m0_63137193&label=LargeCarved&query=//div[@class=%22person-code-age%22]//span&color=orange" />
 </div>
 <div>
-    <img alt="C++" src="https://img.shields.io/badge/HTML5-20-%2300599C?logo=HTML5">
+    <img alt="C++" src="https://img.shields.io/badge/HTML5-%2300599C?logo=HTML5">
 </div>
 <div>
     <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
