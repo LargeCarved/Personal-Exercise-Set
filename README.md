@@ -5,6 +5,12 @@
 # 练习
 
 <br>
+<div>
+    <img alt="img" src="https://img.shields.io/badge/dynamic/xml?url=https://blog.csdn.net/m0_63137193&label=LargeCarved&query=//div[@class=%22person-code-age%22]//span&color=orange" />
+</div>
+<div>
+    <img alt="img" src="" />
+</div>
 
 更新中  ✿✿ヽ(°▽°)ノ✿
 
