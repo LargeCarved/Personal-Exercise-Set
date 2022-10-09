@@ -17,7 +17,7 @@
 </div>
 <br>
 
-更新中  ✿✿ヽ(°▽°)ノ✿ji
+更新中  ✿✿ヽ(°▽°)ノ✿
 
 [简体中文](README.md) | [繁體中文](README_zh-TW.md) | [English](README_en-US.md) | [日本語](README_ja-JP.md)
 
