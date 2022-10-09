@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>许愿墙</title>
+    <style>
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%;
+            background: linear-gradient(to bottom, #CBEBDB 0%, #3794C0 120%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div[class^="wish-item"] {
+            float: left;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 40px 0 0 30px;
+            padding: 30px 0 0 10px;
+            border-bottom-left-radius: 30px 500px;
+            border-bottom-right-radius: 500px 30px;
+            box-shadow: 0px 0px 15px #6f6b6b67;
+        }
+
+        div[class^="wish-item"] span {
+            position: absolute;
+            left: 150px;
+            bottom: 30px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .wish-item1 {
+            background-color: #e1e199;
+        }
+
+        .wish-item2 {
+            background-color: #f7b3d0;
+        }
+
+        .wish-item3 {
+            background-color: #bde1f0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="clearfix">
+        <div class="wish-item1">
+            <p>路漫漫其修远兮...</p>
+            <span>关闭</span>
+        </div>
+        <div class="wish-item2">
+            <p>I have a dream...</p>
+            <span>关闭</span>
+        </div>
+        <div class="wish-item3">
+            <p>既然选择了远方，便只顾风雨兼程...</p>
+            <span>关闭</span>
+        </div>
+    </section>
+
+</body>
+
+</html>
