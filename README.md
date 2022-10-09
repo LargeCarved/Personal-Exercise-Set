@@ -14,6 +14,6 @@
 
 更新中  ✿✿ヽ(°▽°)ノ✿
 
-[简体中文](README.md) | [繁體中文](README.tw.md) | [English](README.en.md) | [日本語](README.jp.md)
+[简体中文](README.md) | [繁體中文](README_zh-TW.md) | [English](README_en-US.md) | [日本語](README_ja-JP.md)
 
 </div>
