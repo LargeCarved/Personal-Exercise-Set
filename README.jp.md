@@ -2,7 +2,7 @@
 
 <img alt="img" src="https://gitee.com/MANAMAN/exercises/raw/master/img-storage/tt-1.png" width="256" height="256" />
 
-# 练习
+# 練習する
 
 <br>
 
