@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="img/计数器.png" alt="">
+    <h2>超级无敌简陋的计算器</h2>
+    <p>第一个数: <input type="text" id="numOne" pLaceholder="请输入第一数"></p>
+    <p>第二个数: <input type="text" id="numTwo" pLaceholder="请输入第二数"></p>
+    <input type="button" value="+" onclick="result('+')" />
+    <input type="button" value="-" onclick="result('-')" />
+    <input type="button" value="x" onclick="result('*')" />
+    <input type="button" value="÷" onclick="result('/')" />
+    <p>计算结果: <input type="text" id="input_val"></p>
+    <script>
+        function result(s) {
+            var numOne = document.getElementById("numOne").value;
+            var numTwo = document.getElementById("numTwo").value;
+            // if (isNumber(numOne)|| isNumber (numTwo)) { //判断输出
+            if (s == "/") {
+                if (numTwo == 0) {
+                    alert("除数不能为0");
+                } else {
+                    var result = eval(numOne + s + numTwo);
+                    document.getElementById("input_val").value = result.toFixed(2);
+                }
+            } else {
+                var result = eval(numOne + s + numTwo);
+                document.getElementById("input_val").value = result.toFixed(2);
+            }
+            // }else{
+            //     alert("请输入大于零的数字或正确输入数字");
+            // }
+        }
+    </script>
+
+</body>
+
+</html>

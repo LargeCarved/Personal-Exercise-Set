@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var random = Math.floor(Math.random() * 100) + 1;
+        while (true) { //死循环
+            var num = prompt("输入一个1~10的数字")
+            if (num > random) {
+                alert("你猜大了！")
+            } else if (num < random) {
+                alert("你猜小了！")
+            } else {
+                alert("你猜对了！")
+                break; //退出整个循环结束程序
+            }
+        }
+    </script>
+</body>
+
+</html>
