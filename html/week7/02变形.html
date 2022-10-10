@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            margin: 50px 50px;
+            border: 1px solid rgb(0, 136, 255);
+            color: rgb(0, 255, 187);
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            transition: all 3s;
+            transform-origin: left top;
+        }
+
+        .box2:hover {
+            transform: rotate(-45deg);
+        }
+
+        .box3:hover {
+            transform: skew(45deg, 20deg);
+        }
+
+        .box4:hover {
+            transform: scale(1.2);
+        }
+
+        .box5:hover {
+            transform: translate(20px, 30px);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+</body>
+
+</html>
