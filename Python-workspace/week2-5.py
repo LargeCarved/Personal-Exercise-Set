@@ -1,12 +1,12 @@
-print('123','321','213','132',sep='****')
+import math
+print('123', '321', '213', '132', sep='****')
 
 name = 'keging'
 number = 114514
 sex = 'woman'
 age = 17
-print('你的名字',name,'一个数字',number,'性别',sex,'年龄',age,sep='++++')
+print('你的名字', name, '一个数字', number, '性别', sex, '年龄', age, sep='++++')
 
-import math
 # a = eval(input())
 # b = eval(input())
 # c = eval(input())
@@ -16,7 +16,7 @@ import math
 a = 7927149
 b = 'apple pen papne apple'
 
-print(a,b)
+print(a, b)
 print(5.44444)
 print("wow")
 
@@ -49,8 +49,8 @@ print(f'{b}包围着{a}。在{a}{c}天都可以感受{b}')
 # else:
 #     print(f'{a}不是闰年')
 
-#格式化输出
-max,min,ave,fail=0,100,0,0
+# 格式化输出
+max, min, ave, fail = 0, 100, 0, 0
 print('Max: {}\nMin: {}\nAve: {:.1f}\nFail: {}' .format(max, min, ave, fail))
 
 string = 'programming is More fun!'
@@ -65,7 +65,7 @@ else:
     print(n)
 
 m = 6
-for i in range(1,m+1):
-    for j in range(i,0,-1):
-        print(j,end=" ")
+for i in range(1, m+1):
+    for j in range(i, 0, -1):
+        print(j, end=" ")
     print()
