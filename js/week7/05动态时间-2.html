@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            width: 600px;
+        }
+
+        p {
+            color: #c7050d;
+        }
+
+        #minute {
+            font-size: 32px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img src="../../html/week7/07多肉work/images/head.jpg" alt="">
+    <p>当前系统时间：
+        <span id="minute">1</span>
+    </p>
+    <script>
+        function time() {
+            var date = new Date();
+            var t = date.toLocaleTimeString();
+            document.getElementById("minute").innerHTML = t;
+        }
+        var showtime = setInterval("time()", 1000);
+    </script>
+</body>
+
+</html>

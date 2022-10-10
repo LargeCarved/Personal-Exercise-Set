@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+            font-size: 150px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 80px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="minute">1</h1>
+    <h2 id="year">2</h2>
+    <button onclick="shutDownTime()">停止</button>
+    <script>
+        function time() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var ss = date.getSeconds();
+            var t = date.toLocaleTimeString();
+            if (hh < 10) {
+                hh = "0" + hh;
+            }
+            if (mm < 10) {
+                mm = "0" + mm;
+            }
+            if (ss < 10) {
+                ss = "0" + ss;
+            }
+            document.getElementById("minute").innerHTML = hh + ":" + mm + ":" + ss;
+            // document.getElementById("minute").innerHTML = t;
+            document.getElementById("year").innerHTML = year + "-" + month + "-" + day;
+        }
+        var showtime = setInterval("time()", 1000);
+        function shutDownTime() {
+            clearInterval(showtime);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #random {
+            width: 500px;
+            height: 500px;
+            font-size: 400px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="random">1</div>
+    <button onclick="begin()">开始</button>
+    <button onclick="shutDown()">停止</button>
+    <script>
+        var start = null;
+        function begin() {
+            var random = Math.floor(Math.random() * 60 + 1);
+            document.getElementById("random").innerHTML = random;
+            start = setTimeout("begin()", 1);
+        }
+        function shutDown() {
+            clearTimeout(start);
+        }
+        // var random = Math.ceil(2.3);
+        // document.write(random);
+    </script>
+</body>
+
+</html>
