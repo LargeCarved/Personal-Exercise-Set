@@ -46,6 +46,7 @@
 	</div>
 	<script>
 		var n = 1;
+		var arr = [0, 1, 2, 3, 4, 5];//五张图片
 		var img = document.getElementById("pic");
 		var timer = setInterval(next, 3000);
 		img.onmouseenter = function () {//移入图片停止轮播
@@ -55,14 +56,14 @@
 			timer = setInterval(next, 3000);
 		}
 		function next() {
-			if (n >= 5) n = 0;
+			if (arr[n] >= 5) n = 0;
 			n++;
-			img.src = "image/0" + n + ".jpg";
+			img.src = "image/0" + arr[n] + ".jpg";
 		}
 		function pre() {
-			if (n <= 1) n = 6;
+			if (arr[n] <= 1) n = 6;
 			n--;
-			img.src = "image/0" + n + ".jpg";
+			img.src = "image/0" + arr[n] + ".jpg";
 		}
 	</script>
 </body>
