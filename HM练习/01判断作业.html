@@ -10,7 +10,14 @@
 
 <body>
     <script>
-
+        var time = + prompt("输入时间");
+        if (time >= 6 && time < 12) {
+            alert("早上好");
+        } else if (time >= 12 && time < 18) {
+            alert("下午好");
+        } else {
+            alert("晚上好");
+        }
     </script>
 </body>
 
