@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .main {
+            width: 525px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hr_1 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #3275c3;
+            height: 35px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: #3275c3;
+            vertical-align: bottom;
+            padding-left: 12px;
+        }
+
+        .left {
+            text-align: right;
+            width: 80px;
+            height: 25px;
+            padding-right: 5px;
+        }
+
+        .center {
+            width: 135px;
+        }
+
+        .inputClass {
+            width: 130px;
+            height: 16px;
+            border: solid 1px #79abea;
+        }
+
+        div {
+            color: #f00;
+        }
+
+        div img {
+            width: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table class="main" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td><img src="images/logo.jpg" width="150" height="57" alt="logo" /><img src="images/banner.jpg" width="375"
+                    height="57" alt="banner" /></td>
+        </tr>
+        <tr>
+            <td class="hr_1">新用户注册</td>
+        </tr>
+        <tr>
+            <td style="height:10px;"></td>
+        </tr>
+        <form action="#" method="post" name="myform">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="left">用户名：</td>
+                            <td class="center"><input id="user" type="text" class="inputClass" onblur="checkUser()" />
+                            </td>
+                            <td>
+                                <div id="user_prompt">4-16位字符组成，开头不能包含数字</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">密码：</td>
+                            <td class="center"><input id="pwd" type="password" class="inputClass"
+                                    onblur="checkPassword()" /></td>
+                            <td>
+                                <div id="pwd_prompt">密码由4-10位字符组成</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">确认密码：</td>
+                            <td class="center"><input id="repwd" type="password" class="inputClass"
+                                    onblur="checkRePassword()" /></td>
+                            <td>
+                                <div id="repwd_prompt"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">电子邮箱：</td>
+                            <td class="center"><input id="email" type="text" class="inputClass" onblur="checkEmail()" />
+                            </td>
+                            <td>
+                                <div id="email_prompt">邮箱格式示例：web@126.com</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">手机号码：</td>
+                            <td class="center"><input id="mobile" type="text" class="inputClass"
+                                    onblur="checkMobile()" /></td>
+                            <td>
+                                <div id="mobile_prompt"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">出生日期：</td>
+                            <td class="center"><input id="birth" type="text" class="inputClass" onblur="checkBirth()" />
+                            </td>
+                            <td>
+                                <div id="birth_prompt">请按xxxx-xx-xx输入出生日期</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">&nbsp;</td>
+                            <td class="center"><input name="" type="image" src="images/register.jpg" /></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </form>
+        <script>
+            //验证用户名
+            function checkUser() {
+                var user = document.getElementById("user").value;
+                var user_prompt = document.getElementById("user_prompt");
+                if (user.length < 4 || user.length > 16) {
+                    user_prompt.innerHTML = '<img src="images/error.png"/>请输入4-16位用户名';
+                    return false;
+                }
+                if (!isNaN(user.charAt(0))) {
+                    user_prompt.innerHTML = '<img src="images/error.png"/>开头不能为数字';
+                    return false;
+                }
+                user_prompt.innerHTML = '<img src="images/ok.png"/>';
+                return true;
+            }
+
+            //验证密码
+            function checkPassword() {
+                var pwd = document.getElementById("pwd").value;
+                var pwd_prompt = document.getElementById("pwd_prompt");
+                if (pwd.length < 4 || pwd.length > 10) {
+                    pwd_prompt.innerHTML = '<img src="images/error.png"/>请输入4-10位密码';
+                    return false;
+                }
+                pwd_prompt.innerHTML = '<img src="images/ok.png"/>';
+                return true;
+            }
+
+            //验证二次密码
+            function checkRePassword() {
+                var repwd = document.getElementById("repwd").value;
+                var pwd = document.getElementById("pwd").value;
+                var repwd_prompt = document.getElementById("repwd_prompt");
+                if (pwd !== repwd) {
+                    repwd_prompt.innerHTML = '<img src="images/error.png"/>请输入一致的密码';
+                    return false;
+                }
+                repwd_prompt.innerHTML = '<img src="images/ok.png"/>';
+                return true;
+            }
+
+            //验证邮箱
+            function checkEmail() {
+                var email = document.getElementById("email").value;
+                var email_prompt = document.getElementById("email_prompt");
+                var index = email.indexOf("@");
+                if (index == -1) {
+                    email_prompt.innerHTML = "<img src='images/error.png'/>未找到@符号";
+                    return false;
+                }
+                if (email.indexOf(".", index) == -1) {
+                    email_prompt.innerHTML = "<img src='images/error.png'/>未找到.符号或不在@符号后面";
+                    return false;
+                }
+                email_prompt.innerHTML = "<img src='images/ok.png'/>";
+                return true;
+            }
+
+            //验证手机号
+            function checkMobile() {
+                var mobile = document.getElementById("mobile").value;
+                var mobile_prompt = document.getElementById("mobile_prompt");
+                if (mobile.length < 1 || mobile.length > 11) {
+                    mobile_prompt.innerHTML = '<img src="images/error.png"/>请输入正确的手机号';
+                    return false;
+                }
+                for (var i = 0; i < mobile.length; i++) {
+                    if (isNaN(mobile.charAt(i))) {
+                        mobile_prompt.innerHTML = '<img src="images/error.png"/>错误的手机号';
+                        return false;
+                    }
+                }
+                mobile_prompt.innerHTML = '<img src="images/ok.png"/>';
+                return true;
+            }
+
+            //验证出生日期
+            function checkBirth() {
+                var birth = document.getElementById("birth").value;
+                var birth_prompt = document.getElementById("birth_prompt");
+                if (birth.length != 10 || birth.charAt(4) != "-" || birth.charAt(7) != "-") {
+                    birth_prompt.innerHTML = "<img src='images/error.png'/>输入格式不正确";
+                    return false;
+                }
+                birth_prompt.innerHTML = '<img src="images/ok.png"/>';
+                return true;
+            }
+
+            //验证全部
+            // function checkAll() {
+            //     if (checkUser() && checkPassword() && checkRePassword() && checkEmail()) {
+            //         return true;
+            //     } else {
+            //         return false;
+            //     }
+            // }
+        </script>
+    </table>
+</body>
+
+</html>

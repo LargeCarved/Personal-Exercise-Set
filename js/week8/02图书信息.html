@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>图书信息</title>
+	<style type="text/css">
+		#book1,
+		#book2,
+		#book0 {
+			background: #FFC;
+			border: 1px sandybrown solid;
+			padding: 10px;
+			margin: 5px;
+		}
+
+		#book1 img,
+		#book2 img,
+		#book0 img {
+			float: left;
+			margin: 10px;
+		}
+
+		li {
+			line-height: 45px;
+			color: #333;
+			font-family: "微软雅黑";
+			font-size: 20px;
+			list-style: none;
+			padding-top: 5px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="book0"><img src="images/简爱.png" width="160" height="200" id="pic0" />
+		<ul>
+			<li id="bookId0">图书编号：</li>
+			<li id="bookName0">图书名称：</li>
+			<li id="publish0">出版社：</li>
+			<li id="price0">图书价格：</li>
+		</ul>
+	</div>
+	<div id="book1"><img src="images/简爱.png" width="160" height="200" id="pic1" />
+		<ul>
+			<li id="bookId1">图书编号：</li>
+			<li id="bookName1">图书名称：</li>
+			<li id="publish1">出版社：</li>
+			<li id="price1">图书价格：</li>
+		</ul>
+	</div>
+	<div id="book2"><img src="images/简爱.png" width="160" height="200" id="pic2" />
+		<ul>
+			<li id="bookId2">图书编号：</li>
+			<li id="bookName2">图书名称：</li>
+			<li id="publish2">出版社：</li>
+			<li id="price2">图书价格：</li>
+		</ul>
+	</div>
+	<script>
+		var book = [
+			{ "bookSrc": "images/简爱.png", "bookId": "bv001", "bookName": "简爱", "publish": "万卷出版公司", "price": "32.00元" },
+			{ "bookSrc": "images/老人与海.png", "bookId": "bv002", "bookName": "老与海", "publish": "万卷出版公司", "price": "38. 00元" },
+			{ "bookSrc": "images/小王子.png", "bookId": "bv003", "bookName": "小王子", "publish": "万卷出版公司", "price": "28.00元" }
+		]
+		for (var i in book) {
+			document.getElementById("pic" + i).src = book[i].bookSrc;
+			document.getElementById("bookId" + i).innerHTML = "图书编号: " + book[i].bookId;
+			document.getElementById("bookName" + i).innerHTML = "图书名称: " + book[i].bookName;
+			document.getElementById("publish" + i).innerHTML = "出版社: " + book[i].publish;
+			document.getElementById("price" + i).innerHTML = "图书价格: " + book[i].price;
+		}
+	</script>
+</body>
+
+</html>

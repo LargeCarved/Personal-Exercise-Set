@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var json = { "a": 12, "b": 5, "c": 9 };
+        var arr = [12, 5, 7];//普通的数组
+        var jsonArray = [ //json数组
+            { "name": " zhang", "password": "123" },
+            { "name": "yang", "password": "456" },
+        ];
+        document.write(json["a"] + "<br/>")
+        document.write(arr[0] + "<br/>");
+        document.write(jsonArray[0].name + "<br/>");
+        document.write("------------------------------<br/>");
+        //对普通json对象的遍历
+        for (var i in json) {
+            document.write("第" + i + "个:" + json[i] + "<br/>");
+            document.write("------------------------------<br/>");
+        }
+        //对数组的遍历
+        for (var i in arr) {
+            document.write("第" + i + "个:" + arr[i] + "<br/>");
+            document.write("------------------------------<br/>");
+        }
+        //json数组遍历
+        for (var i in jsonArray) {
+            document.write("第" + i + "个:" + jsonArray[i].name + "<br/>");
+        }
+    </script>
+</body>
+
+</html>
