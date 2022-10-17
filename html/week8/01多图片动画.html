@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 1000px;
+            height: 140px;
+            border: 2px solid black;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .box ul {
+            width: 3000px;
+            animation: move 5s linear infinite;
+        }
+
+        .box li {
+            float: left;
+        }
+
+        img {
+            width: 250px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-2000px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="images/01.jpeg" alt=""></li>
+            <li><img src="images/02.jpeg" alt=""></li>
+            <li><img src="images/03.jpeg" alt=""></li>
+            <li><img src="images/04.jpeg" alt=""></li>
+            <li><img src="images/05.jpeg" alt=""></li>
+            <li><img src="images/06.jpeg" alt=""></li>
+            <li><img src="images/07.jpeg" alt=""></li>
+            <li><img src="images/08.jpeg" alt=""></li>
+            <li><img src="images/01.jpeg" alt=""></li>
+            <li><img src="images/02.jpeg" alt=""></li>
+            <li><img src="images/03.jpeg" alt=""></li>
+            <li><img src="images/04.jpeg" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>
