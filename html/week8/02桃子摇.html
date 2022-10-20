@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃桃摇</title>
+    <style>
+        .bg {
+            position: relative;
+            width: 1146px;
+            height: 631px;
+            background: url("images/背景.jpg") no-repeat;
+            margin: 0 auto;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 90px;
+            height: 105px;
+            /* border: 1px solid #000; */
+            background: url("images/peach.png") no-repeat;
+            transform-origin: center top;
+            animation: move 2s linear infinite;
+        }
+
+        .bg p {
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            font-size: 40px;
+            color: #ed7a99;
+            animation: fontMove 1s linear infinite;
+        }
+
+        @keyframes fontMove {
+            0% {
+                transform: scale(0.9);
+            }
+
+            50% {
+                transform: scale(1);
+                color: blueviolet;
+            }
+
+            100% {
+                transform: scale(0.9);
+            }
+        }
+
+        @keyframes move {
+            25% {
+                transform: rotate(15deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-15deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        span:nth-of-type(1) {
+            top: 250px;
+            left: 340px;
+            animation-duration: 1.2s;
+        }
+
+        span:nth-of-type(2) {
+            top: 175px;
+            left: 510px;
+            background-position: 0 -105px;
+            animation-duration: 1.5s;
+        }
+
+        span:nth-of-type(3) {
+            top: 295px;
+            left: 538px;
+            background-position: 0 -210px;
+            animation-duration: 1.8s;
+        }
+
+        span:nth-of-type(4) {
+            top: 208px;
+            left: 723px;
+            background-position: 0 -315px;
+            animation-duration: 2.3s;
+        }
+
+        span:nth-of-type(5) {
+            top: 385px;
+            left: 687px;
+            background-position: 0 -420px;
+            animation-duration: 1.2s;
+        }
+
+        span:nth-of-type(6) {
+            top: 370px;
+            left: 848px;
+            background-position: 0 -525px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <p>桃子摇摇树</p>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>
