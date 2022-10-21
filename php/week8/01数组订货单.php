@@ -28,7 +28,7 @@
             <td>数量</td>
             <td>总价(元)</td>
         </tr>
-        <?php foreach ($goods as $values) { ?>
+        <?php foreach ($goods as $values) : ?>
             <tr>
                 <td><?php echo $values['name']; ?></td>
                 <td><?php echo $values['price']; ?></td>
@@ -37,7 +37,7 @@
                 <td><?php echo $values['price'] * $values['num']; ?></td>
                 <?php $total += $values['price'] * $values['num']; ?>
             </tr>
-        <?php } ?>
+        <?php endforeach ?>
         <tr>
             <td colspan="5">总计 : <?php echo $total; ?>元</td>
         </tr>
