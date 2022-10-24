@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 700px;
+            height: 700px;
+            margin: 100px auto 0;
+            border: 1px solid black;
+            /* font-size: 24px; */
+        }
+
+        ul {
+            width: 350px;
+            margin: 170px auto 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        i {
+            display: inline-block;
+            width: 170px;
+            font-style: normal;
+        }
+
+        input::-webkit-input-placeholder {
+            color: rgb(122, 121, 121);
+        }
+
+        .box input[type="text"] {
+            width: 167px;
+        }
+
+        .box input[type="date"] {
+            width: 167px;
+        }
+
+        .box input[type="color"] {
+            width: 167px;
+        }
+
+        .box input[type="file"] {
+            width: 167px;
+        }
+
+        .box textarea {
+            display: block;
+            width: 340px;
+            height: 100px;
+        }
+
+        .box input[type="submit"] {
+            display: block;
+            width: 100px;
+            height: 30px;
+            margin: 30px auto;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="#">
+            <ul>
+                <li><i>用户名：</i><input type="text" placeholder="李四"></li>
+                <li><i>出生日期：</i><input type="date"></li>
+                <li><i>性别：</i><input type="radio" name="sex" checked="checked">男
+                    <input type="radio" name="sex">女
+                </li>
+                <li><i>体重：</i><input type="number" min="10" max="100">KG</li>
+                <li><i>兴趣：</i><input type="checkbox">唱歌
+                    <input type="checkbox">跳舞
+                    <input type="checkbox">游泳
+                </li>
+                <li><i>喜欢的颜色：</i><input type="color" value="#FF0000"></li>
+                <li><i>上传头像：</i><input type="file"></li>
+                <li>您的建议：<textarea name="" id="" cols="30" rows="10"></textarea></li>
+                <li><input type="submit" value="提交"></li>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>
