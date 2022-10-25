@@ -1,0 +1,340 @@
+body,
+p,
+ul,
+ol,
+li,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+select,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFFFFF;
+    color: #333333;
+    text-align: left;
+    font: 14px/28px Tahoma, Helvetica, Arial, ��Microsoft YaHei��, \5FAE\8F6F\96C5\9ED1, SimSun, sans-serif;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+select,
+input {
+    vertical-align: middle;
+    font-size: 12px;
+    font-family: Tahoma, Helvetica, Arial, ��Microsoft YaHei��, \5FAE\8F6F\96C5\9ED1, SimSun, sans-serif;
+}
+
+img {
+    border: 0;
+}
+
+p {
+    text-indent: 2em;
+}
+
+a,
+a:link,
+a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DC5925;
+    text-decoration: underline;
+}
+
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearFloat {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.bluebg {
+    background: #eff3f6;
+    padding-bottom: 25px;
+}
+
+.header {
+    height: 200px;
+    background: #6095C1;
+    color: #e4f2fe;
+}
+
+.headerlinks {
+    width: 980px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.headertxt {
+    width: 980px;
+    margin: 0 auto;
+    height: 50px;
+    padding-top: 50px;
+    background: url("https://t4.chei.com.cn/account/images/theme/normal/yz_banner_bg.png?20170623 ") no-repeat left top;
+    line-height: 50px;
+    text-align: right;
+}
+
+.header a,
+.header a:link,
+.header a:visited {
+    color: #e4f2fe;
+}
+
+.box {
+    width: 980px;
+    margin: -60px auto 0 auto;
+    padding-bottom: 20px;
+    border: 10px solid #EFF3F6;
+    box-shadow: 0 0 5px #999;
+    background: #FFF;
+}
+
+.t {
+    position: relative;
+    width: 800px;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 1px solid #EFF3F6;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.tlogin {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.tlogin input {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
+    border: none;
+    border-radius: 4px;
+    background: #6095C1;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.tlogin input:hover {
+    opacity: .8;
+}
+
+.mainbox {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.maintxt {
+    height: 65px;
+    line-height: 24px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.regline {
+    width: 800px;
+    margin-bottom: 15px;
+    line-height: 30px;
+    clear: both;
+}
+
+.regtitle {
+    float: left;
+    display: inline;
+    width: 100px;
+    padding-right: 23px;
+    text-align: right;
+}
+
+.regtitles {
+    width: 50px;
+    padding-right: 10px;
+}
+
+.regimpt {
+    float: left;
+    display: inline;
+    margin-left: -15px;
+    color: #F00;
+}
+
+.regiptbox {
+    position: relative;
+    float: left;
+    display: inline;
+}
+
+.regipt {
+    width: 190px;
+    height: 20px;
+    padding: 4px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.regipts {
+    width: 60px;
+}
+
+.regiptl {
+    width: 300px;
+}
+
+.regslt {
+    width: 200px;
+    height: 28px;
+    padding: 3px 0;
+    display: block;
+    margin-top: 2px;
+    line-height: 22px;
+}
+
+.regsubmit {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    vertical-align: middle;
+    border: none;
+    border-radius: 4px;
+    background: #6095C1;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.regsubmit:hover {
+    opacity: .8;
+}
+
+a.colorblue {
+    color: #06C;
+}
+
+a.regsuclogin,
+a.regsuclogin:link,
+a.regsuclogin:visited {
+    display: inline-block;
+    padding: 3px 15px;
+    margin-left: 8px;
+    border-radius: 4px;
+    background: #6095C1;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    cursor: pointer;
+}
+
+a.regsuclogin:hover {
+    opacity: .8;
+}
+
+.btnhqjym {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin-top: 2px;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    background: #F6F6F6;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+}
+
+.btnhqjym:hover {
+    background: #FFF;
+}
+
+.button_disabled {
+    color: #999;
+}
+
+.button_disabled:hover {
+    background: #F6F6F6;
+}
+
+.mleft10 {
+    margin-left: 10px;
+}
+
+input.error {
+    border: 1px solid #e09898;
+    background: #fff1f1;
+}
+
+.error,
+.errorMessage {
+    color: #C00;
+}
+
+.regtips {
+    width: 465px;
+    color: #666;
+}
+
+.phonehas {
+    padding: 8px 20px;
+    margin: 0 0 15px 123px;
+    border: 1px solid #f1e1b1;
+    background: #fffcf3;
+}
+
+.phonehasdot {
+    position: absolute;
+    left: 366px;
+    top: -8px;
+    width: 15px;
+    height: 9px;
+    overflow: hidden;
+    background: url("https://t1.chei.com.cn/account/images/theme/normal/yz_arrow.png ") no-repeat 0 0;
+}

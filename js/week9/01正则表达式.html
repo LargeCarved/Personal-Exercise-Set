@@ -14,7 +14,7 @@
     <script type="text/javascript">
         function check() {
             var tt = document.getElementById("content").value;
-            var reg = /^[a-zA-Z][a-zA-Z0-9]{4-16}$/;//字母开头，字母数组4-16位
+            var reg = /^[a-zA-Z][a-zA-Z0-9]{4-16}$/;//字母开头，字母数字4-16位
             var reg2 = /^.{4-10}$/;//除换行符4-10位
             var reg3 = /^1\d{10}$/;//1开头数字10位
             alert(reg.test(tt));
