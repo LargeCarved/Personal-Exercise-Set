@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            background: url(./images/tree.jpg) no-repeat;
+            background-position: 450px 590px;
+            background-size: 440px;
+        }
+
+        .box {
+            position: relative;
+            top: 200px;
+            left: 800px;
+            width: 1000px;
+            height: 500px;
+            /* margin: 300px auto; */
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            padding-left: 15px;
+            font-size: 34px;
+            font-weight: 700;
+            font-family: "宋体";
+            border-bottom: 1px solid black;
+        }
+
+        ul li {
+            padding: 20px 20px;
+            border-bottom: 1px solid rgb(230, 227, 227);
+        }
+
+        label {
+            display: inline-block;
+            width: 220px;
+            vertical-align: middle;
+            font-size: 22px;
+            font-family: "宋体";
+        }
+
+        .box input {
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        .box ul li textarea {
+            width: 390px;
+            height: 200px;
+            padding-top: 10px;
+        }
+
+        .box ul li textarea:focus {
+            width: 490px;
+        }
+
+        .box input[type="text"],
+        .box input[type="email"],
+        .box input[type="password"],
+        .box input[type="number"],
+        .box textarea {
+            width: 290px;
+            height: 40px;
+            padding-left: 10px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 8px 20px 5px rgba(238, 237, 237, 0.658) inset;
+            background: url(./images/attention.png) no-repeat 95% center;
+            transition: all 0.5s;
+        }
+
+        .box input[type="text"]:focus,
+        .box input[type="email"]:focus,
+        .box input[type="password"]:focus,
+        .box input[type="number"]:focus,
+        .box textarea:focus {
+            width: 390px;
+            border: 1px solid #f00;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.582);
+            background: url(./images/warn.png) no-repeat 95% center;
+        }
+
+        .box input[type="text"]:required:valid,
+        .box input[type="email"]:required:valid,
+        .box input[type="password"]:required:valid,
+        .box input[type="number"]:required:valid,
+        .box textarea:required:valid {
+            border: 1px solid rgb(0, 255, 0);
+            box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.582);
+            background: url(./images/right.png) no-repeat 95% center;
+        }
+
+        .box input[type="checkbox"],
+        .box input[type="radio"] {
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            margin: 0 2px;
+        }
+
+        .box input[type="checkbox"],
+        .box input[type="radio"] {
+            animation: rubberBand 0s;
+        }
+
+        .box input[type="checkbox"]:hover,
+        .box input[type="radio"]:hover {
+            animation-duration: 1s;
+        }
+
+        .box input[type="checkbox"]:active,
+        .box input[type="radio"]:active {
+            animation: none;
+        }
+
+        .box input[type="submit"] {
+            position: absolute;
+            top: 800px;
+            left: 240px;
+            display: block;
+            /* margin: 30px auto; */
+            width: 150px;
+            height: 50px;
+            border: 2px solid rgb(161, 161, 161);
+            border-radius: 5px;
+            font-size: 22px;
+            font-weight: 700;
+            color: rgb(124, 122, 122);
+            /* text-shadow: 0px -1px 1px black; */
+            /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.356); */
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: all 1s;
+            animation: tada 0s;
+        }
+
+        .box input[type="submit"]:hover {
+            border: 2px solid rgb(0, 255, 0);
+            color: rgb(5, 184, 5);
+            animation-duration: 1s;
+        }
+
+        .box input[type="submit"]:active {
+            animation: none;
+        }
+
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            font-size: 16px;
+            color: rgb(77, 77, 77);
+        }
+
+        .box ul li:nth-of-type(6) label,
+        .box ul li:nth-of-type(4) label {
+            width: 45px;
+            /* background-color: green; */
+        }
+
+        @keyframes tada {
+            from {
+                transform: scale3d(1, 1, 1)
+            }
+
+            10%,
+            20% {
+                transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+            }
+
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+            }
+
+            40%,
+            60%,
+            80% {
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+            }
+
+            to {
+                transform: scale3d(1, 1, 1)
+            }
+        }
+
+        @keyframes rubberBand {
+            0% {
+                transform: scaleX(1)
+            }
+
+            30% {
+                transform: scale3d(1.25, .75, 1)
+            }
+
+            40% {
+                transform: scale3d(.75, 1.25, 1)
+            }
+
+            50% {
+                transform: scale3d(1.15, .85, 1)
+            }
+
+            65% {
+                transform: scale3d(.95, 1.05, 1)
+            }
+
+            75% {
+                transform: scale3d(1.05, .95, 1)
+            }
+
+            to {
+                transform: scaleX(1)
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="#" method="get" name="reg" autocomplete="on">
+            <h1>用户注册</h1>
+            <ul>
+                <li><label for="name">昵称:</label><input type="text" name="uname" id="name" placeholder="李四" required>
+                </li>
+                <li><label for="email">注册邮箱:</label><input type="email" name="email" id="email"
+                        placeholder="****@**.com" required></li>
+                <li><label for="password">密码:</label><input type="password" name="password" id="password"
+                        placeholder="4-16位大小写字母加数字" pattern="\w{4,16}" title="4-16位大小写字母加数字" required></li>
+                <li><label style="width: 220px;">性别:</label>
+                    <input type="radio" id="male" name="sex" checked="checked"><label for="male">男</label>
+                    <input type="radio" id="female" name="sex"><label for="female">女</label>
+                </li>
+                <li><label for="age">年龄:</label><input type="number" name="age" id="age" required></li>
+                <li><label style="width: 220px;">兴趣爱好:</label>
+                    <input type="checkbox" id="soccer"><label for="soccer">足球</label>
+                    <input type="checkbox" id="basketball"><label for="basketball">篮球</label>
+                    <input type="checkbox" id="swim"><label for="swim">游泳</label>
+                    <input type="checkbox" id="sing"><label for="sing">唱歌</label>
+                    <input type="checkbox" id="run"><label for="run">跑步</label>
+                    <input type="checkbox" id="yoga"><label for="yoga">瑜伽</label>
+                </li>
+                <li><label for="introduct">自我介绍：</label><textarea name="introduct" id="introduct"
+                        placeholder="Please enter your message" required></textarea></li>
+                <input type="submit" value="立即注册">
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>

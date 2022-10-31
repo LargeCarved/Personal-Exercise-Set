@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get" name="f1" autocomplete="on">
+        <label for="user">用户名:</label>
+        <input type="text" name="username" placeholder="用户名" id="user" pattern="^[a-zA-Z0-9_-]{4, 16}$" required><br>
+        <!-- 邮箱: <input type="email" required name= "email"><br>
+        个人网站: <input type="url" name="ur1"><br> -->
+        <select>
+            <option value="">海口</option>
+            <option value="">三亚</option>
+            <option value="" selected="selected">琼海</option>
+        </select><br>
+        <input type="text" list="city">
+        <datalist id="city">
+            <option value="北京"></option>
+            <option value="上海"></option>
+            <option value="深圳"></option>
+        </datalist>
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+
+</html>
