@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<input type="button" value="选择" onclick="gg()">
+	<font>0010</font>&nbsp&nbsp&nbsp
+	<font>小米</font>
+	<br>
+	<hr>
+
+	<input type="button" value="选择" onclick="gg()">
+	<font>0012</font>&nbsp&nbsp&nbsp
+	<font>小含</font>
+	<script>
+		function gg() {
+			window.opener.document.getElementById("id1").value = "0010";
+			window.opener.document.getElementById("id2").value = "小米";
+			self.close();
+		}
+	</script>
+</body>
+
+</html>
