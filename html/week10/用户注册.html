@@ -14,17 +14,27 @@
         }
 
         body {
+            height: 600px;
+        }
+
+        .all {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 1000px;
+            height: 1000px;
+            transform: translate(-75%, -25%);
             background: url(./images/tree.jpg) no-repeat;
-            background-position: 450px 590px;
+            background-position: -50px 590px;
             background-size: 440px;
         }
 
         .box {
-            position: relative;
+            position: absolute;
             top: 200px;
-            left: 800px;
+            left: 290px;
             width: 1000px;
-            height: 500px;
+            height: 1000px;
             /* margin: 300px auto; */
         }
 
@@ -230,34 +240,37 @@
 </head>
 
 <body>
-    <div class="box">
-        <form action="#" method="get" name="reg" autocomplete="on">
-            <h1>用户注册</h1>
-            <ul>
-                <li><label for="name">昵称:</label><input type="text" name="uname" id="name" placeholder="李四" required>
-                </li>
-                <li><label for="email">注册邮箱:</label><input type="email" name="email" id="email"
-                        placeholder="****@**.com" required></li>
-                <li><label for="password">密码:</label><input type="password" name="password" id="password"
-                        placeholder="4-16位大小写字母加数字" pattern="\w{4,16}" title="4-16位大小写字母加数字" required></li>
-                <li><label style="width: 220px;">性别:</label>
-                    <input type="radio" id="male" name="sex" checked="checked"><label for="male">男</label>
-                    <input type="radio" id="female" name="sex"><label for="female">女</label>
-                </li>
-                <li><label for="age">年龄:</label><input type="number" name="age" id="age" required></li>
-                <li><label style="width: 220px;">兴趣爱好:</label>
-                    <input type="checkbox" id="soccer"><label for="soccer">足球</label>
-                    <input type="checkbox" id="basketball"><label for="basketball">篮球</label>
-                    <input type="checkbox" id="swim"><label for="swim">游泳</label>
-                    <input type="checkbox" id="sing"><label for="sing">唱歌</label>
-                    <input type="checkbox" id="run"><label for="run">跑步</label>
-                    <input type="checkbox" id="yoga"><label for="yoga">瑜伽</label>
-                </li>
-                <li><label for="introduct">自我介绍：</label><textarea name="introduct" id="introduct"
-                        placeholder="Please enter your message" required></textarea></li>
-                <input type="submit" value="立即注册">
-            </ul>
-        </form>
+    <div class="all">
+        <div class="box">
+            <form action="#" method="get" name="reg" autocomplete="on">
+                <h1>用户注册</h1>
+                <ul>
+                    <li><label for="name">昵称:</label><input type="text" name="uname" id="name" placeholder="李四"
+                            required>
+                    </li>
+                    <li><label for="email">注册邮箱:</label><input type="email" name="email" id="email"
+                            placeholder="****@**.com" required></li>
+                    <li><label for="password">密码:</label><input type="password" name="password" id="password"
+                            placeholder="4-16位大小写字母加数字" pattern="\w{4,16}" title="4-16位大小写字母加数字" required></li>
+                    <li><label style="width: 220px;">性别:</label>
+                        <input type="radio" id="male" name="sex" checked="checked"><label for="male">男</label>
+                        <input type="radio" id="female" name="sex"><label for="female">女</label>
+                    </li>
+                    <li><label for="age">年龄:</label><input type="number" name="age" id="age" required></li>
+                    <li><label style="width: 220px;">兴趣爱好:</label>
+                        <input type="checkbox" id="soccer"><label for="soccer">足球</label>
+                        <input type="checkbox" id="basketball"><label for="basketball">篮球</label>
+                        <input type="checkbox" id="swim"><label for="swim">游泳</label>
+                        <input type="checkbox" id="sing"><label for="sing">唱歌</label>
+                        <input type="checkbox" id="run"><label for="run">跑步</label>
+                        <input type="checkbox" id="yoga"><label for="yoga">瑜伽</label>
+                    </li>
+                    <li><label for="introduct">自我介绍：</label><textarea name="introduct" id="introduct"
+                            placeholder="Please enter your message" required></textarea></li>
+                    <input type="submit" value="立即注册">
+                </ul>
+            </form>
+        </div>
     </div>
 </body>
 
