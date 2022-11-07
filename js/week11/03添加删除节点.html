@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="nav"></ul>
+    <input type="button" value="添加" onclick="addAppend()">
+    <input type="button" value="添加" onclick="addInsert()">
+    <input type="button" value="删除" onclick="deleteNode()">
+    <script>
+        var flag = 1;
+        function addAppend() {
+            var lit = document.createElement("li");
+            lit.innerHTML = "我是新创建的li" + flag;
+            var nav = document.querySelector("#nav");
+            nav.appendChild(lit);
+            flag++;
+        }
+        function addInsert() {
+            var lit = document.createElement("li");
+            lit.innerHTML = "我是后来创建的li" + flag;
+            var nav = document.querySelector(" #nav");
+            var lis = document.querySelectorAll("li");
+            nav.insertBefore(lit, lis[1]);
+            flag++;
+        }
+        function deleteNode() {
+            var lis = document.querySelectorAll("li");
+            var nav = document.querySelector("#nav");
+            if (lis.length > 1) {
+                nav.removeChild(lis[1]);
+            } else {
+                alert("该元素已经删除");
+            }
+        }
+    </script>
+</body>
+
+</html>

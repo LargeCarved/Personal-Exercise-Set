@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		#txt {
+			width: 400px;
+			height: 100px;
+			background-color: #DDDDDD;
+		}
+
+		#dv {
+			width: 400px;
+			background-color: #DBF0FF;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h4>你的评论：</h4>
+	<textarea id="txt"></textarea>
+	<br />
+	<input type="button" id="btn" value="评论" onclick="comment()" />
+	<h4>你的留言：</h4>
+	<div id="dv"></div>
+	<script>
+		function comment() {
+			var ps = document.querySelectorAll("#dv p");
+			var text = document.querySelector("#txt").value;
+			var dv = document.querySelector("#dv");
+			if (ps[0] == null) {
+				var p = document.createElement("p");
+				p.innerHTML = text;
+				dv.appendChild(p);
+			} else {
+				var p = document.createElement("p");
+				p.innerHTML = text;
+				dv.insertBefore(p, ps[0]);
+			}
+			// console.log(text);
+		}
+	</script>
+</body>
+
+</html>

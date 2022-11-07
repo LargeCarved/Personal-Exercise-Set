@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>属性操作</title>
+	<style type="text/css">
+		img {
+			border: 0px;
+			float: left;
+			padding: 3px;
+		}
+
+		body {
+			margin: 0px;
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		input {
+			margin-top: 5px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<img src="images/01.jpeg" alt="水果图片" id="pic" />
+	<h1>选择你喜欢的水果：</h1>
+	<input class="fruit" type="checkbox" value="apple" name="fruit" />苹果
+	<input class="fruit" type="checkbox" value="banana" />香蕉
+	<input class="fruit" type="checkbox" value="grape" />葡萄
+	<input class="fruit" type="checkbox" value="pear" />梨
+	<input class="fruit" type="checkbox" value="watermelon" />西瓜
+	<br />
+	<input type="button" value="改变图片" onclick="check()" /><br />
+	<input type="button" value="喜欢的水果" onclick="favourite()" /><br />
+	<input type="button" value="为图片新增一个index自定义属性" onclick="addIndex()" /><br />
+	<input type="button" value="输出index的属性" onclick="showIndex()" />
+	<script>
+		var n = 1;
+		var img = document.getElementById("pic");
+		function check() {
+			if (n >= 5) n = 0;
+			n++;
+			img.src = "images/0" + n + ".jpeg";
+		}
+		function favourite() {
+			var fruit = document.querySelectorAll(".fruit");
+			// fruit[n - 1].checked = true;
+			if (fruit[n - 1].checked == true) {
+				fruit[n - 1].checked = false;
+			} else {
+				fruit[n - 1].checked = true;
+			}
+			// console.log(fruit[i]);
+		}
+		var flag = 1;
+		function addIndex() {
+			img.setAttribute("index", flag);
+			flag++;
+		}
+
+		function showIndex() {
+			console.log(img.getAttribute("index"));
+		}
+		// console.log(document.getElementsByName("fruit"));
+		// console.log(document.getElementsByTagName("input"));
+		// console.log(document.querySelector(".fruit"));
+		// console.log(document.querySelectorAll(".fruit"));
+	</script>
+</body>
+
+</html>
