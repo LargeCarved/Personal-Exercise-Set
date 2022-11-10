@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        table {
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            width: 400px;
+        }
+
+        td {
+            border-right: 1px solid #333;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+
+        .title {
+            font-weight: bold;
+            background-color: #cccccc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table border="0" cellspacing="0" cellpadding="0" id="order">
+        <tr class="title">
+            <td>商品名称</td>
+            <td>数量</td>
+            <td>价格</td>
+            <td>操作</td>
+        </tr>
+        <tr id="del1">
+            <td>防滑真皮休闲鞋</td>
+            <td>12</td>
+            <td>&yen;568.50</td>
+            <td><input type="button" value="删除" onclick="delRow()" /></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="height:30px;">
+                <input type="button" value="增加订单" onclick="addRow()" />
+            </td>
+        </tr>
+    </table>
+    <script>
+        // function addRow() {
+        //     var table = document.getElementById("order");
+        //     var newRow = table.inserRow(1);
+        //     console.log(table.rows);
+        // }
+        function addRow() {
+            var addTable = document.getElementById("order");
+            var row_index = addTable.rows.length - 1;       //新插入行在表格中的位置
+            var newRow = addTable.insertRow(row_index);  //插入新行
+            newRow.id = "row" + row_index;                 //设置新插入行的ID   
+            var col1 = newRow.insertCell(0);
+            col1.innerHTML = "抗疲劳神奇钛项圈";
+            var col2 = newRow.insertCell(1);
+            col2.innerHTML = row_index;
+            var col3 = newRow.insertCell(2);
+            col3.innerHTML = "&yen;568.50";
+            var col4 = newRow.insertCell(3);
+            col4.innerHTML = "<input name='del" + row_index + "' type ='button' value ='删除' onclick =\"delRow('row" + row_index + "') \" />";
+        }
+        function delRow(obj) {
+            var row = obj.parentNode.parentNode.rowIndex;   //删除行所在表格中的位置
+            document.getElementById("order").deleteRow(row);
+        }
+
+    </script>
+</body>
+
+</html>
