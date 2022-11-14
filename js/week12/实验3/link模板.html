@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>使用style改变样式</title>
+	<style type="text/css">
+		li {
+			background-image: url(images/bg1.gif);
+			background-repeat: no-repeat;
+			text-align: center;
+			height: 33px;
+			width: 104px;
+			line-height: 38px;
+			float: left;
+			list-style: none;
+		}
+
+		.bg2 {
+			background-image: url(images/bg2.gif);
+		}
+
+		.bg1 {
+			background-image: url(images/bg1.gif);
+		}
+
+		li a {
+			font-size: 12px;
+			color: #fff;
+			text-decoration: none;
+		}
+
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li><a href="#">公司首页</a></li>
+		<li><a href="#">资讯动态</a></li>
+		<li><a href="#">品牌故事</a></li>
+		<li><a href="#">产品介绍</a></li>
+		<li><a href="#">市场营销</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+</body>
+<script>
+	var lis = document.querySelectorAll("li");
+	for (var i = 0; i < lis.length; i++) {
+		// lis[i].onmouseover = function () {
+		// 	this.style.backgroundImage = "url(images/bg2.gif)";
+		// }
+		// lis[i].onmouseout = function () {
+		// 	this.style.backgroundImage = "url(images/bg1.gif)";
+		// }
+		lis[i].onmouseover = function () {
+			this.className = "bg2";
+		}
+		lis[i].onmouseout = function () {
+			this.className = "bg1";
+		}
+	}
+</script>
+
+</html>
