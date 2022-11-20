@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* border: 1px solid red; */
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="900" height="600">浏览器不支持,请换浏览器</canvas>
+    <script type="text/javascript">
+        //1.获取到画布对象
+        var can = document.getElementById('myCanvas');
+        //2.获取画笔
+        var ctx = can.getContext('2d');
+        //3.规划路径
+        ctx.strokeStyle = 'orange';
+        ctx.lineWidth = 20;
+        ctx.fillStyle = 'orange';
+        //5和2的填充矩形
+        ctx.fillRect(100, 100, 200, 400);
+        ctx.fillRect(350, 100, 200, 400);
+        //删除5的两矩形
+        ctx.clearRect(120, 120, 200, 170);
+        ctx.clearRect(100, 310, 180, 170);
+        //删除2的两矩形
+        ctx.clearRect(350, 120, 180, 170);
+        ctx.clearRect(370, 310, 200, 170);
+        //0的矩形边框
+        ctx.strokeRect(600, 110, 200, 380);
+    </script>
+
+</body>
+
+</html>

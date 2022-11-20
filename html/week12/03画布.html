@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas {
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="900">浏觉器个支持,请换浏觉器</canvas>
+    <script type="text/javascript">
+        var can = document.getElementById('myCanvas');
+        var ctx = can.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(0, 300);
+        ctx.lineTo(200, 300)
+        ctx.lineTo(200, 800);
+        ctx.lineTo(350, 800);
+        ctx.lineTo(350, 500);
+        ctx.lineTo(650, 500);
+        ctx.lineTo(650, 800);
+        ctx.lineTo(800, 800);
+        ctx.lineTo(800, 300);
+        ctx.lineTo(1000, 300);
+        ctx.lineTo(500, 0);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 10;
+        ctx.stroke();
+        ctx.fillStyle = 'pink';
+        ctx.fill();
+    </script>
+</body>
+
+</html>
