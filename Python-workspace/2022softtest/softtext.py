@@ -61,38 +61,38 @@
 # print(a == b == c == d)
 # browser.close()
 
-from time import sleep
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+# from time import sleep
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
 
-# 实例化浏览器
-driver = webdriver.Chrome()
-
-# 打开网址，且放大页面
-driver.get('https://www.baidu.com/')
-driver.maximize_window()
-sleep(2)
-driver.set_window_size(800,800)
-sleep(1)
-driver.set_window_position(500,200)
-sleep(1)
-print(driver.title,driver.current_url)
-
-
-# 需求
-ele = driver.find_element(By.CSS_SELECTOR,'#kw')
-ele.send_keys('易烊千玺')
-sleep(2)
-
-# 清空
-ele.clear()
-ele.send_keys('王嘉尔')
-
-# 时间轴看效果
-sleep(3)
-
-# 关闭页面
-driver.quit()
+# # 实例化浏览器
+# driver = webdriver.Chrome()
+#
+# # 打开网址，且放大页面
+# driver.get('https://www.baidu.com/')
+# driver.maximize_window()
+# sleep(2)
+# driver.set_window_size(800,800)
+# sleep(1)
+# driver.set_window_position(500,200)
+# sleep(1)
+# print(driver.title,driver.current_url)
+#
+#
+# # 需求
+# ele = driver.find_element(By.CSS_SELECTOR,'#kw')
+# ele.send_keys('易烊千玺')
+# sleep(2)
+#
+# # 清空
+# ele.clear()
+# ele.send_keys('王嘉尔')
+#
+# # 时间轴看效果
+# sleep(3)
+#
+# # 关闭页面
+# driver.quit()
 
 # 方法
 """
@@ -108,3 +108,46 @@ driver.quit()
 10、driver.current_url # 获取当前页面url信息
 """
 
+# driver = webdriver.Chrome()
+# driver.get("http://116.13.1.23/ams/front/login.do")
+# sleep(2)
+# driver.set_window_position(-10,0)
+# sleep(0.5)
+# driver.set_window_size(500,500)
+# sleep(0.5)
+# driver.set_window_position(-10,530)
+# sleep(0.5)
+# driver.set_window_position(1195,530)
+# sleep(0.5)
+# driver.set_window_position(1195,0)
+# driver.maximize_window()
+# print(driver.title,driver.current_url)
+# sleep(2)
+# driver.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/form/div[1]/label[2]').click()
+# sleep(1)
+# driver.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/form/div[2]/input').send_keys("23")
+# sleep(1)
+# driver.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/form/div[3]/input').send_keys("student2")
+# sleep(1)
+# driver.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/form/div[4]/input').send_keys("student2")
+# sleep(1)
+# driver.find_element(By.XPATH,'/html/body/div[2]/div/div[2]/form/div[7]/button').click()
+# sleep(1)
+# driver.refresh()
+# sleep(1)
+# print(driver.title,driver.current_url)
+# driver.back()
+# sleep(1)
+# # print(driver.page_source)获取源代码
+# sleep(1)
+# driver.forward()
+# sleep(1)
+# driver.quit()
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from time import sleep
+import unittest
+from ddt import *
