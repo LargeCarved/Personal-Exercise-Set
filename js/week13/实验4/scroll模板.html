@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>带关闭按钮的滚动广告</title>
+	<style type="text/css">
+		.pic {
+			position: absolute;
+			left: 30px;
+			top: 60px;
+			z-index: 1;
+		}
+
+		.close {
+			position: absolute;
+			top: 0px;
+			left: 104px;
+			z-index: 2;
+			cursor: hand;
+		}
+
+		.w {
+			width: 70%;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+
+		.header {
+			height: 100px;
+			background-color: red;
+		}
+
+		.banner {
+			height: 200px;
+			background-color: pink;
+		}
+
+		.main {
+			height: 1500px;
+			background-color: orange;
+		}
+
+		.topBar {
+			width: 100%;
+			height: 100px;
+			background-color: #00BFFF;
+			text-align: center;
+			opacity: 0.6;
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 3;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="pic">
+		<img src="images/advpic.jpg">
+		<img src="images/close.jpg" class="close">
+	</div>
+	<div class="topBar">上部悬挂部分</div>
+	<div class="header w">头部区域</div>
+	<div class="banner w">banner区域</div>
+	<div class="main w">主题区域</div>
+	<script>
+		var pic = document.querySelector('.pic');
+		var pictop = pic.offsetTop;//获取pic的top值
+		var topBar = document.querySelector('.topBar');
+		document.onscroll = function () {
+			var bodytop = document.documentElement.scrollTop;//获取滚动条滚动多少像素
+			console.log(bodytop);
+			pic.style.top = pictop + bodytop + 'px';//top加滚动像素就固定啦
+
+			if (bodytop > 100) {
+				topBar.style.display = "block";
+			} else if (bodytop < 100) {
+				topBar.style.display = "none";
+			}
+		}
+		pic.onclick = function () {
+			pic.style.display = "none";
+		}
+	</script>
+</body>
+
+</html>

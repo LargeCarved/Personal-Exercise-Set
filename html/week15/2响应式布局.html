@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>* {
+            width: 95%;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        header {
+            height: 10vh;
+            border: 1px solid gray;
+            line-height: 10vh;
+            text-align: center;
+            background: purple;
+        }
+
+        nav {
+            height: 20vh;
+            border: 1px solid gray;
+            line-height: 20vh;
+            text-align: center;
+            background: green;
+        }
+
+        main {
+            overflow: hidden;
+        }
+
+        aside,
+        article {
+            height: 60vh;
+            border: 1px solid gray;
+        }
+
+        aside {
+            float: left;
+            width: 50%;
+        }
+
+        article {
+            float: right;
+            width: 48%;
+            line-height: 60vh;
+            text-align: center;
+            background: blue;
+        }
+
+        footer {
+            height: 10vh;
+            border: 1px solid gray;
+            line-height: 10vh;
+            text-align: center;
+            background: rgb(208, 132, 144);
+        }
+
+        @media screen and (max-width: 567px) {
+            aside {
+                display: none;
+            }
+
+            article {
+                width: 100%;
+                border: 1px solid gray;
+            }
+        }
+
+        /* 2. 小屏幕下  大于等于768 */
+
+        /* @media screen and (min-width: 768px) {
+            body>* {
+                width: 75%;
+            }
+        } */
+
+        /* 3. 中等屏幕下 大于等于 992px*/
+
+        /* @media screen and (min-width: 992px) {
+            body>* {
+                width: 85%;
+            }
+        } */
+
+        /* 4. 大屏幕下 大于等于1200*/
+
+        /* @media screen and (min-width: 1200px) {
+            body>* {
+                width: 95%;
+            }
+        } */
+
+    </style>
+</head>
+
+<body>
+    <header>顶部导航栏</header>
+    <nav>轮播图&搜索</nav>
+    <main>
+        <aside>侧边</aside>
+        <article>主体内容</article>
+    </main>
+    <footer>脚注</footer>
+</body>
+
+</html>

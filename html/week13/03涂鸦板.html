@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: black; */
+        }
+
+        .box {
+            width: 380px;
+            margin: 10px auto;
+            /* color: white; */
+            /* background: pink; */
+        }
+
+        canvas {
+            border: 2px solid orange;
+            /* cursor: url(pen.png), auto; */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="color" value="#f00000" id="c">
+        1<input type="range" value="5" min='1' max='50' id="r">50
+        <input type="button" value="画笔" id="pen">
+        <input type="button" value="橡皮擦" id="pi">
+        <input type="button" value="清除" id="clear">
+    </div>
+    <center><canvas id="myCanvas" width="900" height="800">浏览器不支持， 请换浏览器</canvas></center>
+    <script>
+        //获取到画布对象
+        var can = document.getElementById('myCanvas');
+        var color = document.querySelector('#c');
+        var ranger = document.querySelector('#r');
+        var pen = document.querySelector('#pen');
+        var pi = document.querySelector('#pi');
+        var clear = document.querySelector('#clear');
+        var flag = 0;
+        //获取画笔
+        var ctx = can.getContext('2d');
+        //确定画图的起点
+        pen.onclick = function () {
+            flag = 0;
+            // can.style.cursor = 'url(pen.png)';
+        }
+        pi.onclick = function () {
+            flag = 1;
+            // can.style.cursor = 'url(pi.png)';
+        }
+        can.onmousedown = function (e) {
+            // alert(e.offsetX+': '+e.offsetY);
+            ctx.beginPath();
+            var x = e.offsetX;
+            var y = e.offsetY;
+            ctx.moveTo(x, y);
+            //鼠标移动画图
+            can.onmousemove = function (e) {
+                var x1 = e.offsetX;
+                var y1 = e.offsetY;
+                ctx.lineTo(x1, y1);
+                ctx.strokeStyle = color.value;
+                ctx.lineWidth = ranger.value;
+                if (flag == 0) {
+                    ctx.stroke();
+                } else if (flag == 1) {
+                    ctx.clearRect(x1, y1, 30, 30);
+                }
+            }
+        }
+        //松开鼠标停止画图
+        can.onmouseup = function () {
+            can.onmousemove = null;
+        }
+        clear.onclick = function () {
+            ctx.clearRect(0, 0, 900, 800);
+        }
+    </script>
+</body>
+
+</html>

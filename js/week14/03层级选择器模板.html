@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>我不知道</title>
+	<script src="./jquery-3.6.1.js"></script>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 10px;
+			float: left;
+			font-size: 12px;
+		}
+
+		#div2 {
+			width: 150px;
+			height: 150px;
+		}
+
+		#div3 {
+			width: 50px;
+			height: 50px;
+			background-color: white;
+		}
+
+		#div4 {
+			width: 100px;
+			height: 100px;
+			background-color: white;
+		}
+
+	</style>
+</head>
+
+<body>
+	<button id="btn1">设置id为div1的元素里所有后代div元素为红色</button>
+	<button id="btn2">设置id为div1的元素里的所有子代div元素为粉色</button>
+	<button id="btn3">设置id为div1的元素后紧接的div元素为绿色</button>
+	<button id="btn4">设置id为div1的元素所有兄弟元素为黄色</button><br />
+	<div id="div1">
+		父元素div1
+		<div id="div2">
+			div1的子元素，也是后代元素
+			<div id="div3">
+				div1的后代元素
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="div4"></div>
+	</div>
+	<div>
+	</div>
+	<script>
+		$(function () {
+			$("#btn1").click(function () {
+				$("#div1 div").css("background-color", "red");
+			})
+			$("#btn2").click(function () {
+				$("#div1>div").css("background-color", "pink");
+			})
+			$("#btn3").click(function () {
+				$("#div1+div").css("background-color", "green");
+			})
+			$("#btn4").click(function () {
+				$("#div1~div").css("background-color", "yellow");
+			})
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        #myCanvas {
+            width: 500px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" />
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillRect(20, 20, 50, 50);
+        ctx.save()
+        ctx.fillStyle = "#0000ff";
+        ctx.fillRect(80, 20, 50, 50);
+        ctx.restore();
+        ctx.fillRect(140, 20, 50, 50);
+    </script>
+</body>
+
+</html>

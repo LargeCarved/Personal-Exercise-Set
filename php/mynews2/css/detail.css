@@ -1,0 +1,96 @@
+li {
+  list-style: none;
+}
+.detail-bg {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  top: -50px;
+}
+.contentBox {
+  position: relative;
+  width: 90%;
+  height: 1000px;
+  margin: 0 auto;
+  /* background-color: pink; */
+}
+.contentBox .titlenav {
+  border-bottom: 1px solid #ccc;
+}
+.contentBox .titlenav h1 {
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.contentBox .titlenav p {
+  font-size: 15px;
+  color: #ccc;
+  letter-spacing: 3px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.contentBox .sharebox {
+  position: absolute;
+  right: 1%;
+  top: 5%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contentBox .sharebox img {
+  display: inline;
+  width: 30px;
+  height: 30px;
+  margin: 0 2%;
+}
+
+.contentBox .main_content {
+  margin-top: 10%;
+  padding: 1% 5%;
+}
+
+.contentBox .main_content p {
+  font-size: 20px;
+}
+.contentBox .main_content .content_bg {
+  margin: 5% 0;
+  width: 70%;
+}
+
+footer {
+  margin-top: 10%;
+  width: 100%;
+  height: 200px;
+  background-color: #ccc;
+}
+footer .itembox {
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%);
+}
+footer .item {
+  width: 200px;
+  float: left;
+}
+footer .item ul {
+  margin: 10%;
+}
+footer .item ul li {
+  font-size: 15px;
+  padding: 5% 0;
+}
+
+footer .item ul li:hover {
+  color: red;
+}
+footer .callus {
+  width: 300px;
+  position: absolute;
+  margin-top: 1%;
+  right: 10%;
+}
+
+footer .callus p {
+  padding: 1%;
+}

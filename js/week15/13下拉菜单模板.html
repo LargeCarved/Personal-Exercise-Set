@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		ul,
+		li {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		a {
+			color: #4c4c4c;
+			text-decoration: none;
+			font-size: 12px;
+		}
+
+		.nav {
+			border-top: 3px solid #f60;
+			width: 300px;
+			height: 48px;
+			line-height: 48px;
+		}
+
+		.nav>li {
+			float: left;
+			position: relative;
+		}
+
+		.nav a {
+			display: block;
+			padding-left: 18px;
+			padding-right: 18px;
+		}
+
+		.nav a:hover {
+			background-color: #ededed;
+			color: #f60;
+		}
+
+		.nav ul {
+			display: none;
+			position: absolute;
+			top: 48px;
+			left: 0;
+			width: 62px;
+			border-left: 1px solid #FECC5B;
+			border-right: 1px solid #FECC5B;
+		}
+
+		.nav>li>ul>li {
+			border-bottom: 1px solid #fecc5b;
+		}
+
+	</style>
+	<script src="../jquery-3.6.1.js"></script>
+</head>
+
+<body>
+	<ul class="nav">
+		<li>
+			<a href="#">微博</a>
+			<ul>
+				<li><a href="">私信</a></li>
+				<li><a href="">评论</a></li>
+				<li><a href="">@我</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">博客</a>
+			<ul>
+				<li><a href="">私信</a></li>
+				<li><a href="">评论</a></li>
+				<li><a href="">@我</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">邮箱</a>
+			<ul>
+				<li><a href="">私信</a></li>
+				<li><a href="">评论</a></li>
+				<li><a href="">@我</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script>
+		$(function () {
+			$(".nav li").mouseover(function () {
+				$(this).children("ul").show();
+			})
+			$(".nav li").mouseout(function () {
+				$(this).children("ul").hide();
+			})
+		})
+	</script>
+</body>
+
+</html>

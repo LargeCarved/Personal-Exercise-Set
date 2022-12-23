@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <h1 style="margin: 0; padding: 5%; color: #fff;"></h1>
+    </div>
+  </nav>
+  <img src="../images/topbg.jpg" class="detail-bg" style="opacity: 60%;">
+  <?php foreach($news as $n):?>
+  <div class="contentBox">
+    <!-- 标题信息 -->
+    <div class="titlenav">
+      <h1><?php echo $n['title'];?></h1>
+      <p>发布者：<?php echo $n['publish'];?></p>
+      <div class="sharebox">
+        <p style="display: inline-block;white-space:nowrap;line-height: 30px;">分享</p>
+        <img src="../images/朋友圈.png" alt="">
+        <img src="../images/icon_新浪-纯色logo.png" alt="">
+        <img src="../images/qq.png" alt="">
+        <img src="../images/微信.png" alt="">
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    <!-- 内容部分 -->
+    <div class="main_content">
+        <p><?php echo $n['content']?></p>
+        <img src="../images/content-bg.jpg" alt="" class="content_bg">
+    </div>
+  </div>
+  <?php endforeach;?>
+  <!-- 页脚 -->
+  <footer>
+    <div class="itembox">
+      <div class="item">
+        <ul>
+          <li>关于我们</li>
+          <li>发展前程</li>
+          <li>企业荣誉</li>
+          <li>联系我们</li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li>关于服务</li>
+          <li>公关活动</li>
+          <li>创意营销</li>
+          <li>品牌策划</li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li>新闻中心</li>
+          <li>友情链接</li>
+          <li>投诉建议</li>
+          <li>客户留言</li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li>案例中心</li>
+          <li>荣誉中心</li>
+          <li>工程案例</li>
+          <li>售后服务</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callus">
+      <p style="font-size: 15px;letter-spacing: 2px;"><span style="font-weight: 700;font-size: 25px;">服务热线</span>Service Hotline</p>
+      <p style="font-size: 30px;letter-spacing: 1px;">0591-38128005</p>
+      <hr />
+      <p>邮件：1345343543@qq.com</p>
+      <p>qq 4313131313/464543
+      </p>
+      <p>地址：福海路，海南软件职业技术学院</p>
+    </div>
+  </footer>
+</body>
+
+</html>

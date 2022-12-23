@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex响应式</title>
+    <style>
+        .main {
+            min-height: 500px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: row;
+        }
+
+        .main>* {
+            margin: 4px;
+            border-radius: 10px;
+        }
+
+        .main article {
+            background: #719DCA;
+            flex: 3;
+        }
+
+        .main nav {
+            background: #FFBA41;
+            flex: 1;
+        }
+
+        .main aside {
+            background: #FFBA41;
+            flex: 1;
+        }
+
+        header,
+        footer {
+            margin: 4px;
+            min-height: 100px;
+            border: 2px solid #FFBA41;
+            border-radius: 7pt;
+            background: #fff;
+        }
+
+        @media screen and (max-width: 575px) {
+            .main {
+                flex-flow: column;
+            }
+
+            .main article {
+                order: -1;
+            }
+
+            header,
+            footer {
+                min-height: 50px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <div class="main">
+        <nav>nav</nav>
+        <article>articla</article>
+        <aside>aside</aside>
+    </div>
+    <footer>footer</footer>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<!-- 引入css 初始化的css 文件 -->
+		<link rel="stylesheet" href="css/base.css">
+		<!-- 引入car css -->
+		<link rel="stylesheet" href="css/car.css">
+		<!-- 先引入jquery -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- 再引入我们自己的js文件 -->
+		<script src="js/cart.js"></script>
+	</head>
+	<body>
+		<h2>购物车</h2>
+		<div class="c-container">
+			<div class="w">
+				<div class="cart-filter-bar">
+					<em>全部商品</em>
+				</div>
+				<!-- 购物车主要核心区域 -->
+				<div class="cart-warp">
+					<!-- 头部模块 -->
+					<div class="cart-thead">
+						<div class="t-checkbox">
+							<input type="checkbox" name="" id="" class="checkall"> 全选
+						</div>
+						<div class="t-goods">商品</div>
+						<div class="t-price">单价</div>
+						<div class="t-num">数量</div>
+						<div class="t-sum">小计</div>
+						<div class="t-action">操作</div>
+					</div>
+					<!-- 商品列表模块 -->
+					<div class="cart-item-list">
+						<div class="cart-item">
+							<div class="p-checkbox">
+								<input type="checkbox" checked class="j-checkbox">
+							</div>
+							<div class="p-goods">
+								<div class="p-img">
+									<img src="images/affogato.jpg" alt="">
+								</div>
+								<div class="p-msg">阿馥奇朵™<br>AFFOGATO<br>双份精萃浓缩咖啡，新西兰进口香草冰淇淋</div>
+							</div>
+							<div class="p-price">￥34.00</div>
+							<div class="p-num">
+								<div class="quantity-form">
+									<a href="javascript:;" class="decrement">-</a>
+									<input type="text" class="itxt" value="1">
+									<a href="javascript:;" class="increment">+</a>
+								</div>
+							</div>
+							<div class="p-sum">￥34.00</div>
+							<div class="p-action"><a href="javascript:;">删除</a></div>
+						</div>
+						<div class="cart-item">
+							<div class="p-checkbox">
+								<input type="checkbox" class="j-checkbox">
+							</div>
+							<div class="p-goods">
+								<div class="p-img">
+									<img src="images/cold-brew-malt.jpg" alt="">
+								</div>
+								<div class="p-msg">麦芽雪冷萃™<br>COLD BREW MALT<br>冷萃咖啡，双份新西兰进口香草冰淇淋巧克力味苦味酒，麦芽成分</div>
+							</div>
+							<div class="p-price">￥32.00</div>
+							<div class="p-num">
+								<div class="quantity-form">
+									<a href="javascript:;" class="decrement">-</a>
+									<input type="text" class="itxt" value="1">
+									<a href="javascript:;" class="increment">+</a>
+								</div>
+							</div>
+							<div class="p-sum">￥32.00</div>
+							<div class="p-action"><a href="javascript:;">删除</a></div>
+						</div>
+						<div class="cart-item">
+							<div class="p-checkbox">
+								<input type="checkbox" class="j-checkbox">
+							</div>
+							<div class="p-goods">
+								<div class="p-img">
+									<img src="images/cold-brew-float.jpg" alt="">
+								</div>
+								<div class="p-msg">冷萃浮乐朵™<br>COLD BREW MALT<br>冷萃咖啡，新西兰进口香草冰淇淋</div>
+							</div>
+							<div class="p-price">￥33.00</div>
+							<div class="p-num">
+								<div class="quantity-form">
+									<a href="javascript:;" class="decrement">-</a>
+									<input type="text" class="itxt" value="1">
+									<a href="javascript:;" class="increment">+</a>
+								</div>
+							</div>
+							<div class="p-sum">￥33.00</div>
+							<div class="p-action"><a href="javascript:;">删除</a></div>
+						</div>
+					</div>
+					<!-- 结算模块 -->
+					<div class="cart-floatbar">
+						<div class="select-all">
+							<input type="checkbox" name="" id="" class="checkall">全选
+						</div>
+						<div class="operation">
+							<a href="javascript:;" class="remove-batch"> 删除选中的商品</a>
+							<a href="javascript:;" class="clear-all">清理购物车</a>
+						</div>
+						<div class="toolbar-right">
+							<div class="amount-sum">已经选<em>1</em>件商品</div>
+							<div class="price-sum">总价： <em>￥34.00</em></div>
+							<div class="btn-area">去结算</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

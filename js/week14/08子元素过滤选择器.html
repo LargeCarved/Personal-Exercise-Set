@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="./jquery-3.6.1.js"></script>
+	<style type="text/css">
+		body {
+			text-align: center;
+			font-size: 12px;
+		}
+
+		div {
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 10px;
+			float: left;
+		}
+
+		div>div {
+			width: 70px;
+			height: 70px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="one">
+		class="div1"
+		<div class="two">class="two"</div>
+		<div class="three">class="three"</div>
+	</div>
+	<div class="one">
+		class="div1"
+		<div class="two">class="two"</div>
+	</div>
+	<button id="btn1">选择所有div元素，且此元素为其父元素下的第二个子元素</button><br />
+	<button id="btn2">选择所有div元素，且此元素为其父元素下的第一个子元素</button><br />
+	<button id="btn3">选择所有class属性不等于one的div，且此元素为其父元素下的最后一个子元素</button><br />
+	<button id="btn4">选择所有div元素，且此元素为其父元素下的唯一子元素</button><br />
+</body>
+<script>
+	$(function () {
+		$('button:first').click(function () {
+			$('div:nth-child(2)').css("background-color", "red");
+		})
+		$('button:eq(1)').click(function () {
+			$('div:first-child').css("background-color", "red");
+		})
+		$('button:eq(2)').click(function () {
+			$('div[class!="one"]:last-child').css("background-color", "red");
+		})
+		$('button:last').click(function () {
+			$('div:only-child').css("background-color", "red");
+		})
+	})
+</script>
+
+</html>

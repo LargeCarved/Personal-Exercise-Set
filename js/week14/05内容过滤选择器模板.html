@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="./jquery-3.6.1.js"></script>
+	<style type="text/css">
+		body {
+			font-size: 12px;
+			text-align: center;
+		}
+
+		div {
+			width: 100px;
+			height: 100px;
+			border: solid 1px #666;
+			margin: 10px auto;
+		}
+
+		.three,
+		.fore {
+			width: 70px;
+			height: 70px;
+			background-color: white;
+		}
+
+	</style>
+</head>
+
+<body>
+	<button id="btn1">选择含有文本"world"的div元素设置背景为红色</button>
+	<button id="btn2">选择不包含子元素(或文本元素)的div空元素设置背景为粉色</button>
+	<button id="btn3">选择含有class为three元素的div元素设置背景为绿色</button>
+	<button id="btn4">选择含有子元素(或文本元素)的div元素设置背景为黄色</button>
+	<div>hello world</div>
+	<div></div>
+	<div>
+		<div class="three">class="three"
+		</div>
+	</div>
+</body>
+<script>
+	$(function () {
+		$("button:first").click(function () {
+			$("div:contains('world')").css("background-color", "red");
+		})
+		$("button:eq(1)").click(function () {
+			$("div:empty").css("background-color", "pink");
+		})
+		$("button:eq(2)").click(function () {
+			$("div:has('.three')").css("background-color", "green");
+		})
+		$("button:last").click(function () {
+			$("div:parent").css("background-color", "yellow");
+		})
+	})
+</script>
+
+</html>

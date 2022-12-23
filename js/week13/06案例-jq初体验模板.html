@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>不知道</title>
+	<style type="text/css">
+		div {
+			height: 200px;
+			background-color: pink;
+			margin-bottom: 20px;
+			display: none;
+		}
+
+	</style>
+	<script src="./jquery-3.6.1.js"></script>
+</head>
+
+<body>
+	<input type="button" value="显示" id="btn1" />
+	<input type="button" value="显示内容" id="btn2" />
+	<input type="button" value="隐藏" id="btn3" />
+	<div></div>
+	<div></div>
+	<div></div>
+	<script>
+		// var btn1 = document.getElementById('btn1');
+		// var btn2 = document.getElementById('btn2');
+		// var btn3 = document.getElementById('btn3');
+		// var divs = document.querySelectorAll('div');
+		// btn1.onclick = function () {
+		// 	for (var i = 0; i < divs.length; i++) {
+		// 		divs[i].style.display = 'block';
+		// 	}
+		// }
+		// btn2.onclick = function () {
+		// 	for (var i = 0; i < divs.length; i++) {
+		// 		divs[i].innerHTML = 'js做法：内容';
+		// 	}
+		// }
+		// btn3.onclick = function () {
+		// 	for (var i = 0; i < divs.length; i++) {
+		// 		divs[i].style.display = 'none';
+		// 	}
+		// }
+
+		//jq的做法
+
+		$(function () {
+			$('#btn1').click(function () {
+				$('div').show();
+			})
+			$('#btn2').click(function () {
+				$('div').html("我是jq的内容");
+			})
+			$('#btn3').click(function () {
+				$('div').hide();
+			})
+		})
+	</script>
+</body>
+
+</html>

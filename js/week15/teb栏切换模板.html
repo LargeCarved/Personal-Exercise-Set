@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>tab栏切换</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+
+		.clearfix::after {
+			content: "";
+			display: block;
+			width: 0px;
+			height: 0px;
+			clear: both;
+		}
+
+		.clearfix {
+			*zoom: 1;
+		}
+
+		.tab {
+			width: 900px;
+			border: 1px solid #ccc;
+			margin: 10px auto;
+		}
+
+		.tab_list ul {
+			list-style: none;
+			border-bottom: 1px solid #FF0000;
+		}
+
+		.tab_list ul li {
+			float: left;
+			width: 150px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			cursor: pointer;
+		}
+
+		.tab_list .current {
+			background-color: #FF0000;
+			color: #fff;
+		}
+
+		.item {
+			display: none;
+		}
+
+		.item:first-child {
+			display: block;
+		}
+
+		.tab_con img {
+			width: 900px;
+		}
+
+	</style>
+	<script src="../jquery-3.6.1.js"></script>
+</head>
+
+<body>
+	<div class="tab">
+		<!-- 每个选项卡-->
+		<div class="tab_list">
+			<ul class="clearfix">
+				<li class="current">Xiaomi手机</li>
+				<li>Redmi手机</li>
+				<li>电视</li>
+				<li>笔记本</li>
+				<li>平板</li>
+				<li>家电</li>
+			</ul>
+		</div>
+		<!-- 对应的内容 -->
+		<div class="tab_con">
+			<div class="item">
+				<img src="images/xiaomishouji.jpg" />
+			</div>
+			<div class="item">
+				<img src="images/hongmishouji.jpg" />
+			</div>
+			<div class="item">
+				<img src="images/dianshi.jpg" />
+			</div>
+			<div class="item">
+				<img src="images/bijiben.jpg" />
+			</div>
+			<div class="item">
+				<img src="images/pingban.jpg" />
+			</div>
+			<div class="item">
+				<img src="images/jiadian.jpg" />
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			$(".tab .tab_list li").mousemove(function () {
+				$(this).attr('class', 'current');
+				$(this).siblings().attr('class', ' ');
+				var index = $(this).index();
+				$(".tab .tab_con div").eq(index).show();
+				$(".tab .tab_con div").eq(index).siblings().hide();
+			})
+		})
+	</script>
+</body>
+
+</html>

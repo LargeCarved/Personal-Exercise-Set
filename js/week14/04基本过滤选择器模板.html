@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="./jquery-3.6.1.js"></script>
+	<style type="text/css">
+		li {
+			width: 50px;
+			height: 20px;
+			margin: 10px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>过滤选择器</h1>
+	<h2>基本过滤选择器</h2>
+	<ul>
+		<li>第0项</li>
+		<li>第1项</li>
+		<li>第2项</li>
+		<li class="three">第3项</li>
+		<li>第4项</li>
+	</ul>
+	<button>选择第一个li标签</button>
+	<button>选择最后一个li标签</button>
+	<button>选择除class属性为three的所有li标签</button><br /><br />
+	<button>选择索引为偶数的li标签</button>
+	<button>选择索引为奇数的li标签</button>
+	<button>选择索引值为3的li标签</button>
+	<button>选择索引值大于3的li标签</button>
+	<button>选择索引值小于3的li标签</button>
+	<button>选择网页中所有的标题标签</button>
+</body>
+<script>
+	$(function () {
+		$("button:first").click(function () {
+			$("li:first").css("background-color", "red");
+		})
+		$("button:eq(1)").click(function () {
+			$("li:last").css("background-color", "red");
+		})
+		$("button:eq(2)").click(function () {
+			$("li:not('.three')").css("background-color", "red");
+		})
+		$("button:eq(3)").click(function () {
+			$("li:even").css("background-color", "red");
+		})
+		$("button:eq(4)").click(function () {
+			$("li:odd").css("background-color", "red");
+		})
+		$("button:eq(5)").click(function () {
+			$("li:eq(3)").css("background-color", "red");
+		})
+		$("button:eq(6)").click(function () {
+			$("li:gt(3)").css("background-color", "red");
+		})
+		$("button:eq(7)").click(function () {
+			$("li:lt(3)").css("background-color", "red");
+		})
+		$("button:eq(8)").click(function () {
+			$(":header").css("background-color", "red");
+		})
+	})
+</script>
+
+</html>

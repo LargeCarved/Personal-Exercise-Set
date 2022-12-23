@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* border: 1px solid red; */
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id="mycan" height="800" width="800"></canvas>
+    <script>
+        var can = document.getElementById('mycan');
+        var mc = can.getContext('2d');
+
+        mc.beginPath();//这是第一季度
+        mc.moveTo(300, 400);
+        mc.arc(300, 400, 200, 0 * Math.PI, 0.4 * Math.PI);
+        // mc.strokeStyle = 'red';
+        mc.fillStyle = 'pink';
+        mc.closePath();
+        mc.fill();
+        mc.stroke();
+
+        mc.beginPath();//这是第二季度
+        mc.moveTo(300, 400);
+        mc.arc(300, 400, 200, 0.4 * Math.PI, 1.2 * Math.PI);
+        // mc.strokeStyle = 'red';
+        mc.fillStyle = 'orange';
+        mc.closePath();
+        mc.fill();
+        mc.stroke();
+
+        mc.beginPath();//这是第三季度
+        mc.moveTo(300, 400);
+        mc.arc(300, 400, 200, 1.2 * Math.PI, 1.4 * Math.PI);
+        // mc.strokeStyle = 'red';
+        mc.fillStyle = 'green';
+        mc.closePath();
+        mc.fill();
+        mc.stroke();
+
+        mc.beginPath();//这是第四季度
+        mc.moveTo(300, 400);
+        mc.arc(300, 400, 200, 1.4 * Math.PI, 2 * Math.PI);
+        // mc.strokeStyle = 'red';
+        mc.fillStyle = 'skyblue';
+        mc.closePath();
+        mc.fill();
+        mc.stroke();
+
+        mc.font = '35px 微软雅黑';
+        mc.fillStyle = 'pink';
+        mc.fillText('第一季度:20%', 550, 250);
+
+        mc.fillStyle = 'orange';
+        mc.fillText('第二季度:40%', 550, 350);
+
+        mc.fillStyle = 'green';
+        mc.fillText('第三季度:10%', 550, 450);
+
+        mc.fillStyle = 'skyblue';
+        mc.fillText('第四季度:30%', 550, 550);
+    </script>
+</body>
+
+</html>

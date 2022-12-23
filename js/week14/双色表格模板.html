@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>双色表格</title>
+	<script src="./jquery-3.6.1.js"></script>
+	<style type="text/css">
+		h1 {
+			color: #063;
+			font-weight: bold;
+			font-family: "黑体";
+			text-align: center;
+		}
+
+		.datalist {
+			border: 1px solid #007108;
+			background-color: #d9ffdc;
+			font-size: 14px;
+			border-collapse: collapse;
+			width: 800px;
+			margin: 0px auto;
+		}
+
+		.datalist td {
+			border: 1px solid #007108;
+			text-align: center;
+			line-height: 20px;
+			padding: 4px 10px;
+		}
+
+		.tableHeader {
+			background: #00a40c;
+			color: #FFF;
+			font-weight: bold;
+		}
+
+		.evenStyle {
+			background-color: #a5e5aa;
+		}
+
+		.over {
+			background-color: #ff9;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>学生信息表</h1>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="datalist">
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>性别</td>
+			<td>年龄</td>
+			<td>电话号码</td>
+		</tr>
+		<tr>
+			<td>20141201</td>
+			<td>陈奕炫</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424456</td>
+		</tr>
+		<tr>
+			<td>20141202</td>
+			<td>李伟涛</td>
+			<td>男</td>
+			<td>19</td>
+			<td>13882424457</td>
+		</tr>
+		<tr>
+			<td>20141203</td>
+			<td>卢志宏</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424461</td>
+		</tr>
+		<tr>
+			<td>20141204</td>
+			<td>马晓松</td>
+			<td>男</td>
+			<td>17</td>
+			<td>13882424458</td>
+		</tr>
+		<tr>
+			<td>20141205</td>
+			<td>朱俊亮</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424459</td>
+		</tr>
+		<tr>
+			<td>20141206</td>
+			<td>范汉华</td>
+			<td>男</td>
+			<td>19</td>
+			<td>13882424460</td>
+		</tr>
+		<tr>
+			<td>20141207</td>
+			<td>陈荣辉</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424461</td>
+		</tr>
+		<tr>
+			<td>20141208</td>
+			<td>吴家良</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424462</td>
+		</tr>
+		<tr>
+			<td>20141209</td>
+			<td>张安享</td>
+			<td>男</td>
+			<td>19</td>
+			<td>13882424463</td>
+		</tr>
+		<tr>
+			<td>20141210</td>
+			<td>吴耀东</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424464</td>
+		</tr>
+		<tr>
+			<td>20141211</td>
+			<td>黄小桂</td>
+			<td>女</td>
+			<td>18</td>
+			<td>13882424465</td>
+		</tr>
+		<tr>
+			<td>20141212</td>
+			<td>陈永亮</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424466</td>
+		</tr>
+		<tr>
+			<td>20141213</td>
+			<td>黄博</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424467</td>
+		</tr>
+		<tr>
+			<td>20141214</td>
+			<td>张晓佳</td>
+			<td>女</td>
+			<td>18</td>
+			<td>13882424468</td>
+		</tr>
+		<tr>
+			<td>20141215</td>
+			<td>林德佳</td>
+			<td>男</td>
+			<td>18</td>
+			<td>13882424469</td>
+		</tr>
+	</table>
+</body>
+<script>
+	$(function () {
+		$("tr:nth-child(2n+1)").css("background-color", "#a5e5aa");
+		$("tr:first").css("background-color", "#098911");
+	})
+</script>
+
+</html>
